@@ -256,10 +256,6 @@ for i in end_times:
 # lists that will go into graphs
 halfhour_2022_netchange = [0]
 halfhour_2021_netchange = [0]
-st.write(day_trip_start_2022)
-st.write(day_trip_end_2022)
-st.write(day_trip_start_2021)
-st.write(day_trip_end_2021)
 
 # gets trips started and ended for each half hour period
 for i in range(0, 48):
