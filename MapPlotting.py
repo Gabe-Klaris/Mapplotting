@@ -124,7 +124,7 @@ for i in dates_2022_Q4:
     trips_per_day = 0
     # if the date is between the date range
     if (i >= start_date and i <= end_date):
-        i = i.strftime("%-m/%#d/%Y")
+        i = i.strftime("%m/%-d/%Y")
         for j in start_times:
             trip_date = j.split(" ")
             trip_day = trip_date[0]
@@ -137,7 +137,7 @@ for i in dates_2022_Q4:
     trips_per_day = 0
     # if the date is between the date range
     if (i >= start_date and i <= end_date):
-        i = i.strftime("%-m/%#d/%Y")
+        i = i.strftime("%m/%-d/%Y")
         for j in end_times:
             trip_date = j.split(" ")
             trip_day = trip_date[0]
