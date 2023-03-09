@@ -388,7 +388,7 @@ st.pyplot(fig1)
 if date_2021 in us_holidays:
     st.write(us_holidays.get(date_2021))
 st.write("""The y axis (Net change in bikes per half hour) is calculated by subtracting the trips that ended
-at the station by the trips that ended at the station during the half hour peroid. This number will be
+at the station by the trips that started at the station during the half hour peroid. This number will be
 the overall net change in bikes available at the station through the half hour. This also means that
 this number does not calculate the activity of the station as a value of \"0\" could mean that
 five trips started and ended at the station or that nobody used the station in the half hour.""")
