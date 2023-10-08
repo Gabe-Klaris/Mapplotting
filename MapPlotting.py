@@ -123,7 +123,7 @@ average_trips_end = [0]
 for i in dates_2022_Q4:
     trips_per_day = 0
     # if the date is between the date range
-    if (i.date() >= start_date and i.date() <= end_date):
+    if (i >= pd.Timestamp(start_date) and i <= pd.Timestamp(end_date)):
         i = i.strftime("%m/%-d/%Y")
         for j in start_times:
             trip_date = j.split(" ")
@@ -136,7 +136,7 @@ for i in dates_2022_Q4:
 for i in dates_2022_Q4:
     trips_per_day = 0
     # if the date is between the date range
-    if (i.date() >= start_date and i.date() <= end_date):
+    if (i >= pd.Timestamp(start_date) and i <= pd.Timestamp(end_date)):
         i = i.strftime("%m/%-d/%Y")
         for j in end_times:
             trip_date = j.split(" ")
