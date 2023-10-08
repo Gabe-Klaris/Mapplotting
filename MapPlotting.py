@@ -123,7 +123,7 @@ average_trips_end = [0]
 for i in dates_2022_Q4:
     trips_per_day = 0
     # if the date is between the date range
-    if (i >= start_date and i <= end_date):
+    if (i.date() >= start_date and i.date() <= end_date):
         i = i.strftime("%m/%-d/%Y")
         for j in start_times:
             trip_date = j.split(" ")
@@ -136,7 +136,7 @@ for i in dates_2022_Q4:
 for i in dates_2022_Q4:
     trips_per_day = 0
     # if the date is between the date range
-    if (i >= start_date and i <= end_date):
+    if (i.date() >= start_date and i.date() <= end_date):
         i = i.strftime("%m/%-d/%Y")
         for j in end_times:
             trip_date = j.split(" ")
@@ -314,7 +314,7 @@ if (start_date < end_date):
     dates_list = []
 
     # gets all the dates within the range
-    for i in range(dates_2022_Q4.index(start_date), dates_2022_Q4.index(end_date) + 1):
+    for i in range(dates_2022_Q4.index(pd.Timestamp(start_date)), dates_2022_Q4.index(pd.Timestamp(end_date)) + 1):
         j = dates_2022_Q4[i]
         k = j.strftime("%m/%d/%Y")
         dates_list.append(k)
@@ -332,8 +332,8 @@ if (start_date < end_date):
         st.write(i)
     fig = plt.figure()
     ax = plt.axes()
-    x_values = np.arange(1, 2 + dates_2022_Q4.index(end_date) -
-                         dates_2022_Q4.index(start_date), 1)
+    x_values = np.arange(1, dates_2022_Q4.index(pd.Timestamp(end_date)) + 2 - 
+                         dates_2022_Q4.index(pd.Timestamp(start_date)), 1)
     plt.xticks(x_values, dates_list)
     ax.tick_params(axis='x', rotation=70, labelsize=3)
     plt.xlabel("Days")
